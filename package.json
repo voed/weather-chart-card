@@ -1,6 +1,6 @@
 {
   "name": "weather-chart-card",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Weather card with charts for Home Assistant Lovelace UI",
   "keywords": [
     "home-assistant",
@@ -16,14 +16,14 @@
   "license": "MIT",
   "dependencies": {
     "lit": "^2.0.2",
-    "chart.js": "3.5.1",
+    "chart.js": "3.9.1",
     "chartjs-plugin-datalabels": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "acorn": "^8.4.1",
     "rollup": "^2.33.1",
-    "rollup-plugin-node-resolve": "^5.2.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "rollup-plugin-serve": "^1.1.0"
   },
   "scripts": {
