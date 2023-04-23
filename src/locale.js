@@ -22,7 +22,7 @@ const locale = {
     'lightning': 'Bouřky',
     'lightning-rainy': 'Bouřky, déšť',
     'partlycloudy': 'Polojasno',
-    'pouring': 'Silný déť',
+    'pouring': 'Silný déšť',
     'rainy': 'Déšť',
     'snowy': 'Sníh',
     'snowy-rainy': 'Sníh s deštěm',
@@ -122,7 +122,38 @@ const locale = {
     'sunny': 'Soleado',
     'windy': 'Viento',
     'windy-variant': 'Viento variable'
-  }, 
+  },
+  fi: {
+    'tempHi': 'Lämpötila ylin',
+    'tempLo': 'Lämpötila alin',
+    'precip': 'Sademäärä',
+    'units': {
+      'km/h': 'km/h',
+      'm/s': 'm/s',
+      'hPa': 'hPa',
+      'mmHg': 'mm Hg',
+      'mm': 'mm',
+      'in': 'in'
+    },
+    'cardinalDirections': [
+      'N', 'N-NE', 'NE', 'E-NE', 'E', 'E-SE', 'SE', 'S-SE',
+      'S', 'S-SW', 'SW', 'W-SW', 'W', 'W-NW', 'NW', 'N-NW', 'N'
+    ],
+    'clear-night': 'Y\u00f6, selke\u00e4\u00e4',
+    'cloudy': 'Pilvist\u00e4',
+    'fog': 'Sumuista',
+    'hail': 'Raekuuroja',
+    'lightning': 'Ukkoskuuroja',
+    'lightning-rainy': 'Ukkosta, sateista',
+    'partlycloudy': 'Osittain pilvist\u00e4',
+    'pouring': 'Kaatosadetta',
+    'rainy': 'Sateista',
+    'snowy': 'Lumisadetta',
+    'snowy-rainy': 'R\u00e4nt\u00e4sadetta',
+    'sunny': 'Aurinkoista',
+    'windy': 'Tuulista',
+    'windy-variant': 'Tuulista'
+  },
   hu: {
     'tempHi': 'Max. hőmérséklet',
     'tempLo': 'Min. hőmérséklet',
@@ -184,7 +215,100 @@ const locale = {
     'sunny': 'Ясно',
     'windy': 'Ветрено',
     'windy-variant': 'Ветрено'
-  }
+  },
+  sv: {
+    'tempHi': 'Temperatur max',
+    'tempLo': 'Temperatur min',
+    'precip': 'Nederbörd',
+    'units': {
+        'km/h': 'km/h',
+        'm/s': 'm/s',
+        'hPa': 'hPa',
+        'mmHg': 'mm Hg',
+        'mm': 'mm',
+        'in': 'in'
+    },
+    'cardinalDirections': [
+        'N', 'N-NE', 'NE', 'E-NE', 'E', 'E-SE', 'SE', 'S-SE',
+        'S', 'S-SW', 'SW', 'W-SW', 'W', 'W-NW', 'NW', 'N-NW', 'N'
+    ],
+    'clear-night': 'Klar natt',
+    'cloudy': 'Molnigt',
+    'fog': 'Dimma',
+    'hail': 'Hagel',
+    'lightning': 'Åska',
+    'lightning-rainy': 'Åska och regn',
+    'partlycloudy': 'Varierat molntäcke',
+    'pouring': 'Ösregn',
+    'rainy': 'Regnigt',
+    'snowy': 'Snöigt',
+    'snowy-rainy': 'Snöblandat regn',
+    'sunny': 'Soligt',
+    'windy': 'Blåsigt',
+    'windy-variant': 'Blåsigt'
+  },
+  fr: {
+    'tempHi': 'Temperature max',
+    'tempLo': 'Temperature min',
+    'precip': 'Précipitations',
+    'units': {
+      'km/h': 'km/h',
+      'm/s': 'm/s',
+      'hPa': 'hPa',
+      'mmHg': 'mm Hg',
+      'mm': 'mm',
+      'in': 'po'
+    },
+    'cardinalDirections': [
+      'N', 'N-NE', 'NE', 'E-NE', 'E', 'E-SE', 'SE', 'S-SE',
+      'S', 'S-SO', 'SO', 'O-SO', 'O', 'O-NO', 'NO', 'N-NO', 'N'
+    ],
+    'clear-night': 'Nuit dégagé',
+    'cloudy': 'Nuageux',
+    'fog': 'Brouillard',
+    'hail': 'Grèle',
+    'lightning': 'Tonnère',
+    'lightning-rainy': 'Orage',
+    'partlycloudy': 'Couvert partielle',
+    'pouring': 'Forte Pluie',
+    'rainy': 'Pluie',
+    'snowy': 'Neige',
+    'snowy-rainy': 'Neige et Pluie',
+    'sunny': 'Ensoleillé',
+    'windy': 'Venteux',
+    'windy-variant': 'Venteux'
+  },
+  nb: {
+    'tempHi': 'Maksimumstemperatur',
+    'tempLo': 'Minimumstemperatur',
+    'precip': 'Nedbør',
+    'units': {
+        'km/h': 'km/t',
+        'm/s': 'm/s',
+        'hPa': 'hPa',
+        'mmHg': 'mm Hg',
+        'mm': 'mm',
+        'in': 'in'
+    },
+    'cardinalDirections': [
+        'N', 'N-NE', 'NE', 'Ø-NØ', 'Ø', 'Ø-SØ', 'SØ', 'S-SØ',
+        'S', 'S-SV', 'SV', 'V-SV', 'V', 'V-NV', 'NV', 'N-NV', 'N'
+    ],
+    'clear-night': 'Klar natt',
+    'cloudy': 'Overskyet',
+    'fog': 'Tåke',
+    'hail': 'Hagl',
+    'lightning': 'Lyn',
+    'lightning-rainy': 'Lyn og regn',
+    'partlycloudy': 'Varierende skydekke',
+    'pouring': 'Styrtregn',
+    'rainy': 'Regn',
+    'snowy': 'Snø',
+    'snowy-rainy': 'Sludd',
+    'sunny': 'Sol',
+    'windy': 'Vind',
+    'windy-variant': 'Vind'
+  },
 };
 
 export default locale;

@@ -42,9 +42,9 @@ class WeatherChartCard extends LitElement {
       ...config,
       forecast: {
         labels_font_size: 11,
-        temperature1_color: 'rgba(230, 100, 100, 1.0)',
+        temperature1_color: 'rgba(255, 152, 0, 1.0)',
         temperature2_color: 'rgba(68, 115, 158, 1.0)',
-        precipitations_color: 'rgba(132, 209, 253, 1.0)',
+        precipitation_color: 'rgba(132, 209, 253, 1.0)',
         condition_icons: true,
         ...config.forecast,
       },
@@ -64,12 +64,17 @@ class WeatherChartCard extends LitElement {
     this._hass = hass;
     this.language = hass.selectedLanguage || hass.language;
     this.sun = 'sun.sun' in hass.states ? hass.states['sun.sun'] : null;
+    this.unitSpeed = this.config.units.speed ? this.config.units.speed : 'km/h';
+    this.unitPressure = this.config.units.pressure ? this.config.units.pressure : 'hPa';
     this.weather = this.config.entity in hass.states
       ? hass.states[this.config.entity] : null;
     if (this.weather) {
-      this.temperature = this.weather.attributes.temperature;
-      this.humidity = this.weather.attributes.humidity;
-      this.pressure = this.weather.attributes.pressure;
+      //this.temperature = this.weather.attributes.temperature;
+      this.temperature = this.config.temp ? hass.states[this.config.temp].state : this.weather.attributes.temperature;
+      //this.humidity = this.weather.attributes.humidity;
+      this.humidity = this.config.humid ? hass.states[this.config.humid].state : this.weather.attributes.humidity;
+      //this.pressure = this.weather.attributes.pressure;
+      this.pressure = this.config.press ? hass.states[this.config.press].state : this.weather.attributes.pressure;
       this.windSpeed = this.weather.attributes.wind_speed;
       this.windDirection = this.weather.attributes.wind_bearing;
     }
@@ -212,8 +217,8 @@ class WeatherChartCard extends LitElement {
           type: 'bar',
           data: precip,
           yAxisID: 'PrecipAxis',
-          borderColor: config.forecast.precipitations_color,
-          backgroundColor: config.forecast.precipitations_color,
+          borderColor: config.forecast.precipitation_color,
+          backgroundColor: config.forecast.precipitation_color,
           barPercentage: 1.0,
           categoryPercentage: 1.0,
           datalabels: {
@@ -279,7 +284,7 @@ class WeatherChartCard extends LitElement {
           },
           PrecipAxis: {
             position: 'right',
-            suggestedMax: 20,
+            suggestedMax: lengthUnit === 'km' ? 20 : 1,
             grid: {
               display: false,
               drawBorder: false,
@@ -487,7 +492,7 @@ class WeatherChartCard extends LitElement {
       windSpeed = Math.round(windSpeed * 1000 / 3600);
     }
     if (this.unitPressure === 'mmHg') {
-      pressure = Math.round(pressure * 0.75);
+      pressure = pressure * 0.75;
     }
     if (config.show_attributes == false)
       return html``;
@@ -495,7 +500,7 @@ class WeatherChartCard extends LitElement {
       <div class="attributes">
         <div>
           <ha-icon icon="hass:water-percent"></ha-icon> ${humidity} %<br>
-          <ha-icon icon="hass:gauge"></ha-icon> ${pressure} ${this.ll('units')[config.units.pressure]}
+          <ha-icon icon="hass:gauge"></ha-icon> ${Math.round(pressure)} ${this.ll('units')[config.units.pressure]}
         </div>
         <div>
           ${this.renderSun()}

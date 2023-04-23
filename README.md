@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/33804747/139556051-d60c824d-0480-4812-a4c0-4f612ab4015b.png)
+![image](https://user-images.githubusercontent.com/33804747/155938742-67770857-33b2-4e95-9601-737677895115.png)
 
 ## Configuration
 
@@ -43,10 +43,10 @@ entity: weather.home
 
 ##### Units of measurement
 
-| Name            | Type    | Default                  | Description                                                                                        |
-| --------------- | ------- | -------------------------|--------------------------------------------------------------------------------------------------- |
-| pressure        | string  | 'hPa'                    | Can be 'hPa' or 'mmHg'                                                                             |
-| speed           | string  | 'km/h'                   | Can be 'km/h' or 'm/s'                                                                             |
+| Name                 | Type    | Default                  | Description                                                                                        |
+| -------------------- | ------- | -------------------------|--------------------------------------------------------------------------------------------------- |
+| pressure             | string  | 'hPa'                    | Can be 'hPa' or 'mmHg'                                                                             |
+| speed                | string  | 'km/h'                   | Can be 'km/h' or 'm/s'                                                                             |
 
 ###### What custom icons can I use?
 Icons should be in svg format. Icons should have names as shown [here](https://github.com/Yevgenium/weather-chart-card/blob/a9f795f2fd02028bdad9b771d383fa38c5f3148c/src/const.js#L24). Example:
