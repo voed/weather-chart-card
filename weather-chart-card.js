@@ -14960,6 +14960,7 @@
       var lengthUnit = this._hass.config.unit_system.length;
       var precipUnit = lengthUnit === 'km' ? this.ll('units')['mm'] : this.ll('units')['in'];
       var forecast = this.getForecast(weather, forecastItems);
+      console.log(forecast);
       if ((new Date(forecast[1].datetime) - new Date(forecast[0].datetime)) < 864e5)
         var mode = 'hourly';
       else
